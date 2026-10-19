@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07151f"><title>食安空防線｜後機砲手</title><style>
+:root{color-scheme:dark;--mint:#b6f872;--line:#ffffff24;--muted:#a4b7bb;--panel:#0b1b23}*{box-sizing:border-box}body{margin:0;background:#07121b;color:#edf6ef;font-family:system-ui,-apple-system,'Noto Sans TC',sans-serif}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--mint);outline-offset:4px}button{border:1px solid var(--line);background:#142832;color:inherit;border-radius:7px;padding:10px 15px}button:hover{background:#24414b}.primary{background:var(--mint);color:#18291e;border-color:var(--mint);font-weight:800}.primary:hover{background:#d0ff9b}.shell{max-width:1500px;margin:auto;padding:0 32px}.top{height:83px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:12px}.brand{display:flex;align-items:center;gap:13px}.mark{font-size:29px;color:var(--mint);line-height:1}.brand b{display:block;letter-spacing:3px;font-size:17px}.brand small{font-size:10px;letter-spacing:3px;color:var(--muted)}.nav{display:flex;gap:9px}.nav button{font-size:12px;background:transparent}.signal{font-size:11px;color:var(--mint);letter-spacing:2px}.intro{display:flex;justify-content:space-between;align-items:end;padding:25px 0 19px;gap:20px}.eyebrow{color:var(--mint);font-size:10px;letter-spacing:3px;margin-bottom:7px}h1{margin:0;font-weight:700;font-size:clamp(22px,3vw,35px);letter-spacing:2px}.intro p{font-size:12px;color:var(--muted);line-height:1.8;margin:0;max-width:400px}.arena{position:relative;border:1px solid #46616b;border-radius:13px;overflow:hidden;background:#183746;height:min(70vh,740px);min-height:410px;isolation:isolate}canvas{display:block;width:100%;height:100%;touch-action:none}.hud{position:absolute;top:20px;left:24px;right:24px;display:flex;justify-content:space-between;pointer-events:none;gap:12px}.hud-left,.hud-right{display:flex;gap:24px}.metric label{font-size:9px;letter-spacing:2px;color:#d0e5e5;display:block}.metric strong{font-family:ui-monospace,monospace;font-size:26px;font-weight:500;line-height:1.4;text-shadow:0 2px 5px #000}.metric strong em{font-style:normal;font-size:11px;color:#a7c7c7}.healthbar{width:100px;height:4px;background:#122b36;margin-top:3px}.healthbar i{height:100%;display:block;background:var(--mint);transition:width .2s}.wave{text-align:center;position:absolute;top:23px;left:50%;transform:translateX(-50%);font:10px ui-monospace,monospace;letter-spacing:2px;color:#c7e6dc;pointer-events:none}.hud-bottom{position:absolute;bottom:19px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:end;pointer-events:none}.heat{width:150px}.heat span{font-size:9px;letter-spacing:2px}.heatbar{height:5px;background:#ffffff20;margin:8px 0}.heatbar i{display:block;height:100%;width:0;background:#e1c68a}.heat small{color:#c0d5d6;font-size:9px}.pause{pointer-events:auto;padding:8px 14px;background:#071a21b3;font-size:12px}.fact{position:absolute;bottom:88px;left:50%;transform:translateX(-50%);max-width:620px;width:calc(100% - 48px);text-align:center;padding:10px 16px;background:#081b25df;border:1px solid #c1f99940;border-radius:6px;pointer-events:none;opacity:0;transition:opacity .2s}.fact b{font-size:12px;color:var(--mint)}.fact p{font-size:11px;margin:5px 0 0;line-height:1.6;color:#dbe9e8}.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#06151be8,#071c2880);padding:28px;z-index:4;overflow:auto}.overlay[hidden],dialog:not([open]){display:none}.brief{max-width:670px;width:100%;text-align:center}.mission{font:10px ui-monospace,monospace;color:var(--mint);letter-spacing:4px}.brief h2{font-size:clamp(30px,5vw,58px);letter-spacing:5px;margin:15px 0 8px;line-height:1.2}.brief>p{font-size:13px;color:#c3d3d4;line-height:1.9;margin:12px auto 20px;max-width:470px}.tags{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:20px 0}.tags span{font-size:10px;border:1px solid #ffffff30;border-radius:4px;padding:7px 10px;color:#d3e1dd}.launch{display:flex;justify-content:center;gap:10px;margin-top:24px}.launch button{padding:13px 27px}.brief .hint{font-size:10px;color:#93aaad;margin-top:17px}.mode{background:#122b35;border:1px solid #ffffff30;padding:11px;border-radius:6px;color:white;max-width:100%}.bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;padding:22px 0 15px}.info{display:flex;gap:12px}.info .num{font:11px ui-monospace,monospace;color:var(--mint);padding-top:2px}.info b{font-size:12px}.info p{font-size:11px;line-height:1.7;color:var(--muted);margin:5px 0}.footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:14px 0 20px;font-size:10px;color:#7f989e;gap:15px}.footer span:last-child{font-family:ui-monospace,monospace;white-space:nowrap}dialog{background:#0e222d;color:#edf6ef;border:1px solid #55717a;border-radius:14px;width:min(850px,calc(100% - 30px));max-height:85dvh;padding:25px;box-shadow:0 30px 100px #0008}dialog::backdrop{background:#020b13b8}.dialogtop{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:15px}.dialogtop h2{font-size:23px;margin:0}.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{background:#ffffff05;border:1px solid var(--line);border-radius:8px;padding:17px}.card small{font-size:9px;letter-spacing:1px;color:var(--mint)}.card h3{font-size:17px;margin:8px 0}.card p{font-size:12px;line-height:1.8;color:#b6cacf;margin:0}.sources{font-size:11px;line-height:1.8;color:#98b1b6;margin-top:18px}.sources a{color:var(--mint)}.setting{display:flex;align-items:center;justify-content:space-between;padding:17px 0;border-top:1px solid var(--line);gap:20px}.setting label{font-size:14px}.setting input[type=range]{width:150px;accent-color:var(--mint)}.results{display:flex;justify-content:center;gap:30px;margin:22px 0}.results b{font:30px ui-monospace,monospace;display:block;color:var(--mint)}.results span{font-size:10px;color:#a6bdc0}.combat-flash{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 100px #ff493b;opacity:0;z-index:3}.fullscreen .intro,.fullscreen .top,.fullscreen .bottom,.fullscreen .footer{display:none}.fullscreen .shell{padding:0;max-width:none}.fullscreen .arena{height:100dvh;border:0;border-radius:0}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:680px){.shell{padding:0 12px}.top{height:67px}.brand b{font-size:14px}.brand small{font-size:8px}.nav button{padding:8px;font-size:11px}.signal{display:none}.intro{padding:17px 2px 13px}.intro p{display:none}.arena{height:66dvh;min-height:410px}.hud{top:15px;left:13px;right:13px}.hud-left,.hud-right{gap:13px}.metric strong{font-size:21px}.metric label{font-size:8px;letter-spacing:1px}.healthbar{width:65px}.wave{top:75px;white-space:nowrap}.hud-bottom{left:14px;right:14px}.heat{width:115px}.overlay{padding:18px}.brief h2{font-size:37px}.brief>p{font-size:12px}.launch{flex-wrap:wrap;margin-top:18px}.bottom{gap:12px;padding:17px 2px;grid-template-columns:1fr}.info p{margin:2px 0}.footer{font-size:9px}.cards{grid-template-columns:1fr}.fact{bottom:83px}.brief .tags{margin:12px 0}.setting input[type=range]{width:110px}}
+</style></head><body><main class="shell"><header class="top"><div class="brand"><span class="mark">✧</span><div><b>食安空防線</b><small>FOOD SAFETY · SKY GUARD</small></div></div><span class="signal">● 防空系統就緒</span><nav class="nav"><button id="atlasBtn">風險圖鑑 ↗</button><button id="soundBtn">聲音設定 ♫</button></nav></header><section class="intro"><div><div class="eyebrow">REAR GUNNER / FIRST-PERSON DEFENSE</div><h1>守住每一道食安防線。</h1></div><p>坐上轟炸機後砲塔，在雲海間辨識風險。<br>瞄準、攔截，讓食品安全知識成為你的火力。</p></section><section class="arena" id="arena" aria-label="第一視角空戰遊戲"><canvas id="game" aria-label="滑鼠移動瞄準、按住射擊；觸控拖曳即可連射"></canvas><div class="combat-flash" id="damage"></div><div class="hud"><div class="hud-left"><div class="metric"><label>攔截積分</label><strong id="score">00000</strong></div><div class="metric"><label>機身耐久</label><strong><span id="hp">100</span><em> %</em></strong><div class="healthbar"><i id="hpBar" style="width:100%"></i></div></div></div><div class="hud-right"><div class="metric"><label>擊落</label><strong id="kills">00</strong></div><div class="metric"><label>任務倒數</label><strong id="clock">01:30</strong></div></div></div><div class="wave" id="wave">SECTOR 01 · 待命</div><div class="fact" id="fact"><b id="factTitle"></b><p id="factText"></p></div><div class="hud-bottom"><div class="heat"><span id="heatLabel">槍管溫度 / HEAT</span><div class="heatbar"><i id="heatBar"></i></div><small id="weaponStatus">雙聯機槍 · 隨時待命</small></div><button class="pause" id="pauseBtn" disabled>Ⅱ 暫停</button></div><div class="overlay" id="overlay"><div class="brief" id="brief"></div></div></section><section class="bottom"><div class="info"><span class="num">01 /</span><div><b>鎖定風險</b><p>毒素噴射機速度 +30%；四種細菌重裝機更大、血量 +50%。</p></div></div><div class="info"><span class="num">02 /</span><div><b>按住連射</b><p>滑鼠瞄準並按住左鍵；手機按住畫面拖曳射擊。</p></div></div><div class="info"><span class="num">03 /</span><div><b>控制火力</b><p>過熱需等待冷卻。P 暫停，F 切換沉浸畫面。</p></div></div></section><footer class="footer"><span>射擊為遊戲比喻，不能用於去除食品毒素。食品添加物依規範使用，不等於有害。</span><span>SKY GUARD / v1.1</span></footer></main><dialog id="atlas"><div class="dialogtop"><div><div class="eyebrow">THREAT INTELLIGENCE</div><h2>食安風險圖鑑</h2></div><button data-close="atlas" aria-label="關閉風險圖鑑">✕</button></div><p style="font-size:12px;color:#b0c4c7">14 種風險：細菌為大型重裝機（機體 +35%、血量 +50%）；4 種毒素為高速噴射機（速度 +30%）。分類與數值僅為遊戲機制，不代表毒性高低。</p><div class="cards" id="cards"></div><div class="sources">教學參考：<a href="https://www.who.int/news-room/fact-sheets/detail/mycotoxins" target="_blank" rel="noopener">WHO — Mycotoxins</a> · <a href="https://www.who.int/news-room/fact-sheets/detail/natural-toxins-in-food" target="_blank" rel="noopener">WHO — Natural toxins in food</a> · <a href="https://www.fda.gov.tw/Tc/PublishOtherEpaperContent.aspx?id=1512&r=1910339319&tid=4772" target="_blank" rel="noopener">食藥署 — 食用色素安全嗎？</a> · <a href="https://www.fda.gov.tw/TC/site.aspx?sid=12938" target="_blank" rel="noopener">食藥署 — 邦克列酸（米酵菌酸）</a> · <a href="https://www.fda.gov.tw/TC/sitecontent.aspx?sid=324" target="_blank" rel="noopener">食藥署 — 食品中毒原因微生物</a> · <a href="https://www.who.int/news-room/fact-sheets/detail/pesticide-residues-in-food" target="_blank" rel="noopener">WHO — 農藥殘留</a> · <a href="https://www.efsa.europa.eu/en/news/nitrosamines-food-raise-health-concern" target="_blank" rel="noopener">EFSA — 亞硝胺</a> · <a href="https://www.fda.gov.tw/UnsafeFood/UnsafeFoodContent.aspx?id=4088" target="_blank" rel="noopener">食藥署 — 二氧化硫殘留規範案例</a><br>教學重點為辨識來源與預防，實際食品風險需依濃度、攝食量及相關規範評估。</div></dialog><dialog id="settings"><div class="dialogtop"><h2>聲音與畫面</h2><button data-close="settings" aria-label="關閉設定">✕</button></div><div class="setting"><label for="music">緊張配樂 <output id="musicValue">45%</output></label><input id="music" type="range" min="0" max="100" value="45"></div><div class="setting"><label for="effects">戰鬥音效 <output id="effectsValue">65%</output></label><input id="effects" type="range" min="0" max="100" value="65"></div><div class="setting"><label for="motion">減少震動與閃光</label><input type="checkbox" id="motion"></div><div class="setting"><label for="immersive">沉浸畫面</label><button id="immersive">切換畫面 ↗</button></div><p class="sources">音樂、機槍、爆炸及引擎音均由程式即時合成，無需下載音檔。按下「開始任務」後啟動聲音。</p></dialog><div id="announcement" class="visually-hidden" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),canvas=$('game'),ctx=canvas.getContext('2d');
+const threats=[
+  {
+    "name": "黃麴毒素",
+    "en": "AFLATOXIN",
+    "kind": "黴菌毒素",
+    "color": "#f9c16a",
+    "hp": 3,
+    "aircraft": "jet",
+    "tip": "部分黴菌可在穀物、堅果等產生黃麴毒素；妥善乾燥與儲存有助降低污染風險。",
+    "detail": "由部分麴菌產生，可污染穀物、堅果等。重點為原料篩選、防潮及儲存管理。"
+  },
+  {
+    "name": "米酵菌酸",
+    "en": "BONGKREKIC ACID",
+    "kind": "細菌產生的毒素",
+    "color": "#f8a977",
+    "hp": 3,
+    "aircraft": "jet",
+    "tip": "米酵菌酸亦稱邦克列酸，是細菌產生的毒素；預防重點為製備衛生與食品保存管理。",
+    "detail": "由特定細菌產生的毒素，並非細菌本身。本遊戲歸為毒素噴射機；食品應避免污染與不當保存。"
+  },
+  {
+    "name": "赭麴毒素 A",
+    "en": "OCHRATOXIN A",
+    "kind": "黴菌毒素",
+    "color": "#cfafff",
+    "hp": 3,
+    "aircraft": "jet",
+    "tip": "赭麴毒素 A 可能污染穀物、咖啡等；防潮與良好儲存管理是重要措施。",
+    "detail": "赭麴毒素類本遊戲以 A 為代表。可由部分麴菌、青黴菌產生，污染防治應從原料與儲存管理著手。"
+  },
+  {
+    "name": "河豚毒素",
+    "en": "TETRODOTOXIN",
+    "kind": "水產天然毒素",
+    "color": "#72dce7",
+    "hp": 4,
+    "aircraft": "jet",
+    "tip": "一般烹煮不能可靠去除河豚毒素；切勿自行處理來路不明的河豚。",
+    "detail": "河豚等生物可能含有神經毒素，常規烹煮、冷凍等方式不能可靠去毒，應重視來源管理。"
+  },
+  {
+    "name": "蘇丹紅",
+    "en": "SUDAN DYES",
+    "kind": "非准用色素",
+    "color": "#ff826e",
+    "hp": 3,
+    "aircraft": "standard",
+    "tip": "蘇丹紅不是准用食用色素；香辛料等原料應落實供應商與來源管理。",
+    "detail": "蘇丹色素為工業用途色素，不可當作食用色素添加。應透過原料追溯、供應商管理與檢驗把關。"
+  },
+  {
+    "name": "農藥殘留",
+    "en": "PESTICIDE RESIDUES",
+    "kind": "超標／違規殘留",
+    "color": "#d6d26e",
+    "hp": 3,
+    "aircraft": "standard",
+    "tip": "本敵機代表超標或違規農藥殘留；檢出殘留不等於違法，應依適用規範判定。",
+    "detail": "農藥殘留須依適用的殘留容許量與相關規範判定。本遊戲攔截的是超標或違規情境，不將所有殘留視為非法。"
+  },
+  {
+    "name": "二氧化硫",
+    "en": "SULFUR DIOXIDE",
+    "kind": "超量／違規使用",
+    "color": "#d0dfec",
+    "hp": 3,
+    "aircraft": "standard",
+    "tip": "亞硫酸鹽類須依使用範圍及限量規範使用；本敵機代表二氧化硫殘留超標或違規情境。",
+    "detail": "部分亞硫酸鹽類可依法用於特定食品，並以二氧化硫殘留量等管理。符合規範的使用不等於違法。"
+  },
+  {
+    "name": "亞硝胺",
+    "en": "NITROSAMINES",
+    "kind": "化學污染物",
+    "color": "#bd9fdf",
+    "hp": 3,
+    "aircraft": "standard",
+    "tip": "亞硝胺與亞硝酸鹽不是同一物質；食品中的亞硝胺風險需從來源與製程管理降低。",
+    "detail": "部分亞硝胺涉及致癌風險，可能在食品加工或其他條件下形成；不可與依法使用的亞硝酸鹽直接畫上等號。"
+  },
+  {
+    "name": "三聚氰胺",
+    "en": "MELAMINE",
+    "kind": "非法摻加情境",
+    "color": "#b2e5de",
+    "hp": 3,
+    "aircraft": "standard",
+    "tip": "三聚氰胺不可拿來提高食品表觀蛋白含量；原料追溯與摻偽檢驗是把關重點。",
+    "detail": "本遊戲代表將非食品用途物質違法摻入食品的情境。應落實來源查核、供應商管理及適當檢驗。"
+  },
+  {
+    "name": "塑化劑",
+    "en": "PLASTICIZERS",
+    "kind": "污染／非法摻加",
+    "color": "#f0b5cf",
+    "hp": 3,
+    "aircraft": "standard",
+    "tip": "塑化劑不可違法摻入食品；接觸材料應符合食品用途及使用條件。",
+    "detail": "塑化劑是一類物質，本遊戲代表違法摻加或不當污染風險。使用接觸材料應遵守食品用途、耐熱性等條件。"
+  },
+  {
+    "name": "肉毒桿菌",
+    "en": "C. BOTULINUM",
+    "kind": "致病細菌",
+    "color": "#daac74",
+    "hp": 4,
+    "aircraft": "bacteria",
+    "tip": "肉毒桿菌可產生肉毒毒素；低酸性密封食品應落實經驗證的製程與保存管理。",
+    "detail": "屬可產生毒素的細菌。細菌、芽孢與其毒素是不同控制對象，不能用單一加熱概念一概處理。"
+  },
+  {
+    "name": "李斯特菌",
+    "en": "L. MONOCYTOGENES",
+    "kind": "致病細菌",
+    "color": "#8fd7ac",
+    "hp": 4,
+    "aircraft": "bacteria",
+    "tip": "李斯特菌可在冷藏條件下生長；即食食品仍需注意衛生、保存期限與冷鏈。",
+    "detail": "此處指單核球增多性李斯特菌。預防重點包括製程衛生、避免再污染，以及即食食品的保存管理。"
+  },
+  {
+    "name": "沙門氏菌",
+    "en": "SALMONELLA",
+    "kind": "致病細菌",
+    "color": "#e6c481",
+    "hp": 4,
+    "aircraft": "bacteria",
+    "tip": "沙門氏菌可污染禽肉、蛋等；充分加熱並避免生熟交叉污染。",
+    "detail": "可能存在於受污染的畜禽肉、蛋與其他食品。生熟分開、器具清潔與適當加熱是重要措施。"
+  },
+  {
+    "name": "金黃色葡萄球菌",
+    "en": "S. AUREUS",
+    "kind": "致病細菌",
+    "color": "#e5cd62",
+    "hp": 4,
+    "aircraft": "bacteria",
+    "tip": "金黃色葡萄球菌可產生耐熱腸毒素；手部衛生及時間、溫度管理很重要。",
+    "detail": "依正式名稱標為金黃色葡萄球菌。預防重點為避免人員污染及不當保存造成增殖產毒，不能只依賴事後再加熱。"
+  }
+];
+$('cards').innerHTML=threats.map(t=>`<article class="card"><small style="color:${t.color}">${t.kind}</small><h3>${t.name}</h3><p>${t.detail}</p><p style="margin-top:10px;color:${t.color};font-size:11px">${t.aircraft==='bacteria'?'大型重裝機 · 機體 +35% · 血量 +50%':t.aircraft==='jet'?'毒素噴射機 · 速度 +30%':'化學風險機 · 標準速度／血量'}</p></article>`).join('');
+let W=1000,H=600,dpr=1,mode='combat',phase='menu',previousPhase='menu',elapsed=0,total=90,score=0,kills=0,hp=100,shots=0,hits=0,heat=0,overheated=false,spawnTimer=0,shotTimer=0,combo=0,comboTime=0,factTime=0,flash=0,shake=0,recoil=0,fire=false,aim={x:.5,y:.47},enemies=[],particles=[],tracers=[],clouds=[],last=0,worldTime=0,high=0,attackId=0;
+let reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;$('motion').checked=!!reduced;
+try{high=Number(localStorage.getItem('skyguard-best')||0)}catch(e){}
+const rnd=(a,b)=>a+Math.random()*(b-a),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function resize(){const r=canvas.getBoundingClientRect();W=r.width;H=r.height;dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)}
+new ResizeObserver(resize).observe(canvas);
+for(let i=0;i<18;i++)clouds.push({x:Math.random(),y:rnd(.18,.86),s:rnd(.6,1.7),speed:rnd(.003,.014)});
+// Web Audio: original minor-key arpeggio, bass pulse, percussion and synthesized combat sounds.
+let ac=null,musicGain=null,sfxGain=null,master=null,engineGain=null,audioTimer=null,nextBeat=0,beat=0,noiseBuffer=null;
+function initAudio(){try{if(!ac){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;ac=new A();master=ac.createDynamicsCompressor();master.threshold.value=-18;master.ratio.value=8;master.connect(ac.destination);musicGain=ac.createGain();sfxGain=ac.createGain();musicGain.connect(master);sfxGain.connect(master);noiseBuffer=ac.createBuffer(1,ac.sampleRate,ac.sampleRate);let data=noiseBuffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=Math.random()*2-1;
+const engine=ac.createOscillator();engine.type='sawtooth';engine.frequency.value=43;const filter=ac.createBiquadFilter();filter.type='lowpass';filter.frequency.value=130;engineGain=ac.createGain();engineGain.gain.value=0;engine.connect(filter);filter.connect(engineGain);engineGain.connect(sfxGain);engine.start();applyVolumes();}if(ac.state==='suspended')ac.resume().catch(()=>{});}catch(e){$('weaponStatus').textContent='此瀏覽器以無聲模式執行';}}
+function applyVolumes(){if(!ac)return;musicGain.gain.setTargetAtTime(+$('music').value/100*.42,ac.currentTime,.03);sfxGain.gain.setTargetAtTime(+$('effects').value/100*.6,ac.currentTime,.03)}
+function tone(midi,t,d,v,type='triangle',bus=musicGain){if(!ac||!bus)return;const o=ac.createOscillator(),g=ac.createGain();o.type=type;o.frequency.setValueAtTime(440*2**((midi-69)/12),t);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(Math.max(.0002,v),t+.008);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(bus);o.start(t);o.stop(t+d+.02);o.onended=()=>{o.disconnect();g.disconnect()}}
+function noise(t,d,v,freq){if(!ac)return;const n=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();n.buffer=noiseBuffer;f.type='lowpass';f.frequency.value=freq;g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);n.connect(f);f.connect(g);g.connect(sfxGain);n.start(t);n.stop(t+d);n.onended=()=>{n.disconnect();f.disconnect();g.disconnect()}}
+function fx(kind){if(!ac||ac.state!=='running')return;const t=ac.currentTime;if(kind==='shot'){noise(t,.065,.32,2100);tone(38,t,.08,.16,'square',sfxGain)}else if(kind==='hit'){tone(91,t,.07,.09,'sine',sfxGain)}else if(kind==='boom'){noise(t,.65,.6,600);tone(25,t,.5,.3,'sine',sfxGain)}else if(kind==='damage'){noise(t,.35,.5,950);tone(40,t,.35,.18,'sawtooth',sfxGain)}else if(kind==='warn'){tone(80,t,.16,.16,'square',sfxGain);tone(76,t+.18,.2,.1,'square',sfxGain)}else if(kind==='start'){[57,60,64,69].forEach((n,i)=>tone(n,t+i*.13,.3,.15,'triangle',sfxGain))}else{[69,64,60,57].forEach((n,i)=>tone(n,t+i*.18,.45,.13,'triangle',sfxGain))}}
+function stopAudio(){clearInterval(audioTimer);audioTimer=null;if(engineGain)engineGain.gain.setTargetAtTime(0,ac.currentTime,.04);if(musicGain)musicGain.gain.setTargetAtTime(0,ac.currentTime,.04)}
+function startAudio(){initAudio();if(!ac)return;stopAudio();applyVolumes();engineGain.gain.setTargetAtTime(.12,ac.currentTime,.4);beat=0;nextBeat=ac.currentTime+.08;function schedule(){if(phase!=='playing')return;while(nextBeat<ac.currentTime+.15){const root=[45,41,48,43][Math.floor(beat/16)%4];const arp=[12,19,24,15,12,19,27,19];tone(root+arp[beat%8],nextBeat,.15,.075,'triangle');if(beat%4===0)tone(root-12,nextBeat,.28,.19,'sawtooth');if(beat%4===0){tone(30,nextBeat,.15,.2,'sine')}if(beat%8===4){tone(78,nextBeat,.045,.055,'square')}beat++;nextBeat+=.137;} }schedule();audioTimer=setInterval(schedule,60)}
+['music','effects'].forEach(id=>$(id).addEventListener('input',()=>{$(id+'Value').textContent=$(id).value+'%';applyVolumes()}));$('motion').addEventListener('change',()=>{reduced=$('motion').checked});
+function menu(){phase='menu';$('brief').innerHTML=`<div class="mission">OPERATION 01 / FOOD SAFETY DEFENSE</div><h2>你，就是最後防線。</h2><p>敵機正穿越雲層，朝轟炸機逼近。<br>進入後機砲塔，以雙聯機槍攔截食品安全風險。</p><div class="tags"><span>第一視角砲塔</span><span>14 種食安風險</span><span>原創戰鬥配樂</span></div><label for="difficulty" class="visually-hidden">任務難度</label><select class="mode" id="difficulty"><option value="combat">正式巡航 · 90 秒 / 標準敵速</option><option value="training">教學巡航 · 120 秒 / 較慢敵速</option></select><div class="launch"><button class="primary" id="launch">開始任務 →</button><button id="learn">查看風險圖鑑</button></div><p class="hint">細菌重裝機：機體 +35%／血量 +50% · 毒素噴射機：速度 +30%<br>按住滑鼠左鍵連射 · 觸控拖曳瞄準射擊<br>個人最高積分 ${high.toLocaleString()}</p>`;$('overlay').hidden=false;$('launch').onclick=()=>start($('difficulty').value);$('learn').onclick=()=>openDialog('atlas');}
+function start(selected){mode=selected;total=mode==='training'?120:90;elapsed=score=kills=shots=hits=heat=combo=comboTime=flash=shake=0;hp=100;enemies=[];particles=[];tracers=[];overheated=false;spawnTimer=.5;shotTimer=0;factTime=0;fire=false;phase='playing';$('overlay').hidden=true;$('pauseBtn').disabled=false;startAudio();fx('start');updateHUD();$('announcement').textContent='任務開始，瞄準敵機並按住連射。'}
+function pause(){if(phase!=='playing')return;phase='paused';fire=false;stopAudio();$('overlay').hidden=false;$('brief').innerHTML=`<div class="mission">FLIGHT ON HOLD</div><h2>任務暫停</h2><p>喘口氣，讓注意力回到瞄準鏡。<br>切回遊戲後，按下繼續即可恢復戰鬥。</p><div class="launch"><button class="primary" id="resume">繼續任務 →</button><button id="pauseLearn">風險圖鑑</button></div><p class="hint">已暫停敵機、倒數與槍管溫度。</p>`;$('resume').onclick=resume;$('pauseLearn').onclick=()=>openDialog('atlas');$('announcement').textContent='任務暫停';}
+function resume(){if(phase!=='paused')return;phase='playing';$('overlay').hidden=true;fire=false;startAudio();}
+function end(win){phase='ended';fire=false;stopAudio();fx('end');$('pauseBtn').disabled=true;if(score>high){high=score;try{localStorage.setItem('skyguard-best',String(high))}catch(e){}}const accuracy=shots?Math.round(hits/shots*100):0;$('overlay').hidden=false;$('brief').innerHTML=`<div class="mission">${win?'MISSION COMPLETE':'MISSION REPORT'}</div><h2>${win?'成功守住空域！':'返航，重新整備。'}</h2><p>${win?'你完成了這次食安防衛巡航。':'機身耐久已耗盡。試著優先攔截距離最近的敵機。'}<br>把戰鬥經驗轉成食安知識，下一次飛得更遠。</p><div class="results"><div><b>${score}</b><span>任務積分</span></div><div><b>${kills}</b><span>擊落敵機</span></div><div><b>${accuracy}%</b><span>命中率</span></div></div><p class="hint">個人最高 ${high.toLocaleString()} 分 · ${mode==='training'?'教學':'正式'}巡航</p><div class="launch"><button class="primary" id="retry">再次出擊 →</button><button id="review">風險圖鑑</button><button id="back">返回待命</button></div>`;$('retry').onclick=()=>start(mode);$('review').onclick=()=>openDialog('atlas');$('back').onclick=menu;$('announcement').textContent=`任務結束，得分 ${score}，擊落 ${kills} 架敵機。`;}
+function openDialog(id){if(phase==='playing')pause();$(id).showModal();fire=false;}
+$('atlasBtn').onclick=()=>openDialog('atlas');$('soundBtn').onclick=()=>openDialog('settings');document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());$('pauseBtn').onclick=pause;
+$('immersive').onclick=()=>{document.body.classList.toggle('fullscreen');requestAnimationFrame(resize)};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&phase==='playing')pause()});window.addEventListener('blur',()=>{fire=false;if(phase==='playing')pause()});
+function pointer(e){const r=canvas.getBoundingClientRect();aim.x=clamp((e.clientX-r.left)/W,.02,.98);aim.y=clamp((e.clientY-r.top)/H,.13,.88)}
+canvas.addEventListener('pointerdown',e=>{if(phase!=='playing'||e.button>0)return;e.preventDefault();canvas.setPointerCapture(e.pointerId);pointer(e);fire=true});canvas.addEventListener('pointermove',pointer);canvas.addEventListener('pointerup',()=>fire=false);canvas.addEventListener('pointercancel',()=>fire=false);canvas.addEventListener('lostpointercapture',()=>fire=false);canvas.addEventListener('contextmenu',e=>e.preventDefault());window.addEventListener('pointerup',()=>fire=false);
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT'].includes(e.target.tagName)||$('atlas').open||$('settings').open)return;if(e.code==='Space'){e.preventDefault();if(phase==='playing')fire=true}if(e.code==='KeyP'){if(phase==='playing')pause();else if(phase==='paused')resume()}if(e.code==='KeyF'){$('immersive').click()}});document.addEventListener('keyup',e=>{if(e.code==='Space')fire=false});
+function enemyStats(t,selectedMode,wave){
+const baseHealth=selectedMode==='training'?Math.max(2,t.hp-1):t.hp;
+return {health:baseHealth*(t.aircraft==='bacteria'?1.5:1),scale:t.aircraft==='bacteria'?1.35:1,speed:((selectedMode==='training'?.075:.1)+wave*.008)*(t.aircraft==='jet'?1.3:1)};
+}
+function spawn(){const t=threats[Math.floor(Math.random()*threats.length)];const wave=Math.min(3,1+Math.floor(elapsed/(total/3)));const stats=enemyStats(t,mode,wave);enemies.push({id:++attackId,t,p:0,x:rnd(.12,.88),y:rnd(.25,.65),seed:rnd(0,7),life:stats.health,max:stats.health,scale:stats.scale,speed:stats.speed,hit:0,px:0,py:0,size:0});}
+function project(e){const q=.11+.89*e.p;return{x:W*(.5+(e.x-.5)*q+Math.sin(worldTime*1.2+e.seed)*.033*q),y:H*(.35+(e.y-.35)*q+Math.cos(worldTime+e.seed)*.018*q),size:(W<600?80:108)*(.16+e.p*1.55)*(e.scale||1)}}
+function shoot(){shots++;heat=Math.min(100,heat+4.8);recoil=1;fx('shot');const x=aim.x*W,y=aim.y*H;tracers.push({x,y,life:.1});let target=null;let distance=-1;for(const e of enemies){const a=project(e);if(Math.abs(x-a.x)<Math.max(a.size*.85,20)&&Math.abs(y-a.y)<Math.max(a.size*.35,17)&&e.p>distance){target=e;distance=e.p}}if(target){hits++;target.life--;target.hit=.12;fx('hit');if(target.life<=0)destroy(target)}if(heat>=100){overheated=true;fx('warn')}}
+function destroy(e){const p=project(e);enemies=enemies.filter(v=>v!==e);kills++;combo=comboTime>0?combo+1:1;comboTime=3.5;score+=100+Math.min(5,combo-1)*20;shake=.17;fx('boom');for(let i=0;i<32;i++)particles.push({x:p.x,y:p.y,vx:rnd(-160,160),vy:rnd(-130,130),life:rnd(.25,.9),max:.9,c:i%3===0?e.t.color:'#ffc67b',s:rnd(2,6)});$('factTitle').textContent=`已攔截 ${e.t.name}  +${100+Math.min(5,combo-1)*20}${combo>1?' · '+combo+' 連擊':''}`;$('factText').textContent=e.t.tip;factTime=5;}
+function update(dt){worldTime+=dt;recoil=Math.max(0,recoil-dt*10);flash=Math.max(0,flash-dt*1.8);shake=Math.max(0,shake-dt);for(const c of clouds){c.x+=c.speed*dt;if(c.x>1.25)c.x=-.25}particles.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=75*dt;p.life-=dt});particles=particles.filter(p=>p.life>0);tracers.forEach(t=>t.life-=dt);tracers=tracers.filter(t=>t.life>0);if(phase!=='playing')return;elapsed+=dt;comboTime-=dt;factTime=Math.max(0,factTime-dt);heat=Math.max(0,heat-dt*(fire&&!overheated?8:28));if(overheated&&heat<25)overheated=false;shotTimer-=dt;if(fire&&!overheated&&shotTimer<=0){shoot();shotTimer=.105}spawnTimer-=dt;if(spawnTimer<=0){spawn();const wave=Math.min(3,1+Math.floor(elapsed/(total/3)));spawnTimer=(mode==='training'?2.3:1.8)-wave*.22+rnd(0,.35)}for(const e of [...enemies]){e.p+=dt*e.speed;e.hit=Math.max(0,e.hit-dt);if(e.p>=1){enemies=enemies.filter(v=>v!==e);hp=Math.max(0,hp-(mode==='training'?12:20));flash=.65;shake=.35;combo=0;comboTime=0;fx('damage');$('factTitle').textContent='機身受損！優先攔截近距離目標';$('factText').textContent=e.t.name+' 突破防線 · '+e.t.tip;factTime=5;if(hp<=0){end(false);break}}}if(phase==='playing'&&elapsed>=total)end(true);updateHUD();}
+function updateHUD(){$('score').textContent=String(score).padStart(5,'0');$('kills').textContent=String(kills).padStart(2,'0');$('hp').textContent=hp;$('hpBar').style.width=hp+'%';$('hpBar').style.background=hp<=40?'#ff8c77':'#b6f872';const left=Math.max(0,Math.ceil(total-elapsed));$('clock').textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');$('heatBar').style.width=heat+'%';$('heatBar').style.background=overheated?'#ff846d':'#e1c68a';$('heatLabel').textContent=overheated?'槍管過熱 / COOLING':'槍管溫度 / HEAT';$('weaponStatus').textContent=overheated?'停止射擊 · 等待冷卻':fire?'雙聯機槍 · 連續射擊':'雙聯機槍 · 隨時待命';const wave=Math.min(3,1+Math.floor(elapsed/(total/3)));$('wave').textContent=`SECTOR 0${wave} · ${['雲層接敵','密集攔截','最後防線'][wave-1]}`;$('fact').style.opacity=factTime>0&&phase==='playing'?1:0;}
+function path(points,fill,stroke){ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}}
+function drawSky(){const sky=ctx.createLinearGradient(0,0,0,H);sky.addColorStop(0,'#0b2334');sky.addColorStop(.45,'#416e7c');sky.addColorStop(.75,'#a4bbc0');sky.addColorStop(1,'#2d5967');ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);const sun=ctx.createRadialGradient(W*.72,H*.31,0,W*.72,H*.31,W*.45);sun.addColorStop(0,'#ffedb345');sun.addColorStop(.3,'#cde4d519');sun.addColorStop(1,'#fff0');ctx.fillStyle=sun;ctx.fillRect(0,0,W,H);
+for(const c of clouds){ctx.save();ctx.translate(c.x*W,c.y*H);ctx.scale(c.s,c.s*.42);let g=ctx.createRadialGradient(0,0,1,0,0,W*.13);g.addColorStop(0,'#dfedec26');g.addColorStop(.5,'#e5eded16');g.addColorStop(1,'#f0ffff00');ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(0,0,W*.16,W*.1,0,0,Math.PI*2);ctx.fill();ctx.restore()}
+// distant terrain below the cloud deck
+for(let layer=0;layer<3;layer++){const base=H*(.74+layer*.08);ctx.beginPath();ctx.moveTo(0,H);for(let x=0;x<=W+10;x+=10){let y=base+Math.sin(x*.005+layer*3)*H*.035+Math.sin(x*.013+layer)*H*.012;ctx.lineTo(x,y)}ctx.lineTo(W,H);ctx.closePath();ctx.fillStyle=['#54798670','#355d6d80','#183e5080'][layer];ctx.fill()}
+ctx.strokeStyle='#ddffff13';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,H*.53);ctx.lineTo(W,H*.53);ctx.stroke();}
+function plane(e){const p=project(e);e.px=p.x;e.py=p.y;e.size=p.size;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(Math.sin(worldTime*1.4+e.seed)*.13);ctx.scale(p.size/100,p.size/100);const color=e.hit>0?'#fff7cf':e.t.color;
+if(e.t.aircraft==='jet'){
+// Swept-wing jet, with air intakes and hot exhaust; no propellers.
+const plume=1+Math.sin(worldTime*25+e.seed)*.12;
+ctx.fillStyle='#72dff177';ctx.beginPath();ctx.ellipse(-18,10,7,24*plume,0,0,7);ctx.ellipse(18,10,7,24*plume,0,0,7);ctx.fill();
+path([[-78,21],[-26,-16],[-9,-31],[0,-48],[9,-31],[26,-16],[78,21],[74,29],[19,11],[12,33],[-12,33],[-19,11],[-74,29]],'#263e4c',color);
+path([[-11,-27],[0,-48],[11,-27],[14,16],[0,35],[-14,16]],'#4c6974','#9bc2c8');
+path([[-6,-26],[0,-62],[6,-26]],'#4d6a74',color);
+ctx.fillStyle='#9ddae8';ctx.beginPath();ctx.ellipse(0,-8,6,14,0,0,7);ctx.fill();
+ctx.fillStyle='#06171e';ctx.beginPath();ctx.ellipse(-19,10,7,10,0,0,7);ctx.ellipse(19,10,7,10,0,0,7);ctx.fill();
+ctx.fillStyle=color;ctx.fillRect(-61,17,19,4);ctx.fillRect(42,17,19,4);
+}else{
+// wing planform, approaching fighter seen nose-on
+path([[-98,10],[-43,-4],[-17,-9],[-11,-20],[11,-20],[17,-9],[43,-4],[98,10],[97,16],[23,14],[10,22],[-10,22],[-23,14],[-97,16]],'#263a45','#7d9da3');
+path([[-13,-18],[-6,-32],[6,-32],[13,-18],[17,18],[0,32],[-17,18]],'#3b5158',color);
+path([[-6,-25],[0,-54],[6,-25]],'#435f66','#9fb6b8');
+path([[-27,-15],[-52,-26],[-52,-18],[-13,-6]],'#415e68','#78979d');path([[27,-15],[52,-26],[52,-18],[13,-6]],'#415e68','#78979d');
+ctx.fillStyle='#a7d7e0';ctx.beginPath();ctx.ellipse(0,-8,7,11,0,0,Math.PI*2);ctx.fill();ctx.fillStyle=color;ctx.fillRect(-75,6,19,4);ctx.fillRect(56,6,19,4);ctx.fillStyle='#0b1b23';ctx.beginPath();ctx.arc(-29,12,9,0,7);ctx.arc(29,12,9,0,7);ctx.fill();
+ctx.strokeStyle='#d5eaed66';ctx.lineWidth=1.5;for(const side of [-29,29]){ctx.save();ctx.translate(side,12);ctx.rotate(worldTime*30);ctx.beginPath();ctx.moveTo(-16,0);ctx.lineTo(16,0);ctx.moveTo(0,-16);ctx.lineTo(0,16);ctx.stroke();ctx.restore()}}
+ctx.restore();
+const fs=W<600?12:13;ctx.font=`600 ${fs}px system-ui`;const labelWidth=Math.max(112,ctx.measureText(e.t.name).width+28),y=p.y-p.size*.65-13;ctx.fillStyle='#081b27da';ctx.fillRect(p.x-labelWidth/2,y-14,labelWidth,37);ctx.strokeStyle=e.t.color+'99';ctx.lineWidth=1;ctx.strokeRect(p.x-labelWidth/2,y-14,labelWidth,37);ctx.textAlign='center';ctx.fillStyle='#edf7ed';ctx.fillText(e.t.name,p.x,y+2);ctx.font='8px ui-monospace,monospace';ctx.fillStyle=e.t.color;ctx.fillText(e.t.aircraft==='jet'?'JET / SPEED +30%':e.t.aircraft==='bacteria'?'HEAVY / HP +50%':e.t.kind,p.x,y+15);ctx.fillStyle='#0b1920';ctx.fillRect(p.x-25,p.y+p.size*.44,50,3);ctx.fillStyle=e.t.color;ctx.fillRect(p.x-25,p.y+p.size*.44,50*e.life/e.max,3);
+}
+function cockpit(){// structural rear turret arcs
+ctx.save();ctx.strokeStyle='#08151ed9';ctx.lineWidth=Math.max(12,W*.018);ctx.beginPath();ctx.ellipse(W*.5,H*.5,W*.61,H*.76,0,Math.PI,Math.PI*2);ctx.stroke();ctx.strokeStyle='#a5b7ac30';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(W*.5,H*.5,W*.595,H*.74,0,Math.PI,Math.PI*2);ctx.stroke();
+path([[0,H*.7],[W*.075,H*.81],[W*.19,H],[0,H]],'#0c1c26','#344954');path([[W,H*.7],[W*.925,H*.81],[W*.81,H],[W,H]],'#0c1c26','#344954');path([[0,H],[W*.12,H*.91],[W*.35,H*.94],[W*.43,H*.88],[W*.57,H*.88],[W*.65,H*.94],[W*.88,H*.91],[W,H]],'#0b1b25','#4a6268');
+// two barrels pivot toward the reticle
+for(const side of [-1,1]){const bx=W*(.5+side*.105),by=H*1.04,tx=W*(.5+side*.06)+(aim.x-.5)*W*.14,ty=H*.76+(aim.y-.5)*H*.07+recoil*5;ctx.lineCap='butt';ctx.strokeStyle='#050e15';ctx.lineWidth=W<600?22:31;ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(tx,ty);ctx.stroke();ctx.strokeStyle='#43545d';ctx.lineWidth=W<600?13:19;ctx.beginPath();ctx.moveTo(bx-3,by);ctx.lineTo(tx-3,ty);ctx.stroke();ctx.strokeStyle='#78858b';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(bx-6,by);ctx.lineTo(tx-6,ty);ctx.stroke();for(let j=0;j<5;j++){let t=.1+j*.12,x=tx+(bx-tx)*t,y=ty+(by-ty)*t;ctx.fillStyle='#08151c';ctx.fillRect(x-5,y,10,4)}if(recoil>.15&&!reduced&&phase==='playing'){ctx.fillStyle='#ffed9ddd';ctx.beginPath();ctx.moveTo(tx-13,ty);ctx.lineTo(tx-17,ty-22);ctx.lineTo(tx-4,ty-12);ctx.lineTo(tx,ty-42);ctx.lineTo(tx+9,ty-15);ctx.lineTo(tx+19,ty-24);ctx.lineTo(tx+13,ty);ctx.fill()}}
+// radar inset
+if(W>700){const x=W-81,y=H-107;ctx.fillStyle='#071b21cc';ctx.beginPath();ctx.arc(x,y,42,0,7);ctx.fill();ctx.strokeStyle='#93d2a54d';ctx.lineWidth=1;for(let r of [20,40]){ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.stroke()}ctx.beginPath();ctx.moveTo(x-40,y);ctx.lineTo(x+40,y);ctx.moveTo(x,y-40);ctx.lineTo(x,y+40);ctx.stroke();ctx.strokeStyle='#b6f87280';ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+Math.cos(worldTime*1.6)*40,y+Math.sin(worldTime*1.6)*40);ctx.stroke();for(const e of enemies){ctx.fillStyle=e.t.color;ctx.beginPath();ctx.arc(x+(e.x-.5)*65,y-33+e.p*60,2,0,7);ctx.fill()}}ctx.restore();}
+function crosshair(){if(phase!=='playing')return;const x=aim.x*W,y=aim.y*H;ctx.save();ctx.translate(x,y);ctx.strokeStyle=overheated?'#ff9a7a':'#d6ffb3';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(0,0,19+recoil*5,0,Math.PI*2);ctx.stroke();ctx.beginPath();for(let i=0;i<4;i++){const a=i*Math.PI/2;ctx.moveTo(Math.cos(a)*10,Math.sin(a)*10);ctx.lineTo(Math.cos(a)*29,Math.sin(a)*29)}ctx.stroke();ctx.fillStyle='#efffd6';ctx.fillRect(-1,-1,2,2);ctx.font='9px ui-monospace,monospace';ctx.textAlign='center';ctx.fillStyle='#efffd6bb';ctx.fillText(overheated?'COOLING':'MG / READY',0,45);ctx.restore();}
+function render(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);ctx.save();if(shake>0&&!reduced)ctx.translate(rnd(-3,3)*shake*3,rnd(-2,2)*shake*3);drawSky();[...enemies].sort((a,b)=>a.p-b.p).forEach(plane);for(const p of particles){ctx.globalAlpha=clamp(p.life/p.max,0,1);ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x,p.y,p.s*p.life/.9,0,7);ctx.fill()}ctx.globalAlpha=1;for(const t of tracers){ctx.strokeStyle='#ffec9bcc';ctx.lineWidth=1.5;for(const side of [-1,1]){ctx.beginPath();ctx.moveTo(W*(.5+side*.06),H*.77);ctx.lineTo(t.x+side*3,t.y);ctx.stroke()}}cockpit();crosshair();ctx.restore();$('damage').style.opacity=reduced?0:flash;}
+function frame(t){const dt=Math.min(.045,Math.max(0,(t-last)/1000));last=t;if(phase==='menu'||phase==='playing')update(dt);render();requestAnimationFrame(frame)}
+menu();resize();requestAnimationFrame(frame);
+</script></body></html>
